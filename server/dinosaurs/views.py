@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from dinosaurs.serializers import DinosaurSerializer
-from dinosaurs.models import Dinosaur
+from .serializers import DinosaurSerializer
+from .models import Dinosaur
 
 
 class DinosaurViewSet(viewsets.ModelViewSet):

@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -56,7 +55,7 @@ MIDDLEWARE_CLASSES = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-ROOT_URLCONF = 'server.urls'
+ROOT_URLCONF = 'index.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'server.wsgi.application'
+WSGI_APPLICATION = 'index.wsgi.application'
 
 
 # Database

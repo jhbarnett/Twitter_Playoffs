@@ -1,4 +1,4 @@
-from dinosaurs.models import Dinosaur
+from .models import Dinosaur
 from rest_framework import serializers
 
 
