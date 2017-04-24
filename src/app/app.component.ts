@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { DinosaurComponent } from './components/dinosaur/dinosaurs'
-import { DinosaurService } from './services/dinosaurService'
+import { TweetsComponent } from './components/tweets/tweets'
+import { TweetService } from './services/tweetService'
 
 @Component({
   selector: 'my-app',
   template: `<h1>Hello {{name}}<span *ngIf="itIsJuly">, DjangoCon</span>!</h1>
-              <dinosaurs></dinosaurs>`,
-  directives: [DinosaurComponent],
-  providers: [DinosaurService]
+              <tweets></tweets>`,
+  directives: [TweetsComponent],
+  providers: [TweetService]
 })
 
 export class AppComponent {

@@ -4,12 +4,12 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class DinosaurService {
-  private apiURL = 'http://localhost:8000/dinosaurs/';
+export class TweetService {
+  private apiURL = 'http://localhost:8000/tweets/';
 
   constructor(private http: Http) { }
 
-  getDinos() {
+  getTweets() {
     return this.http.get(this.apiURL)
               .toPromise()
               .then(response => response.json())

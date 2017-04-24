@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from rest_framework import routers
-from dinosaurs import views
+from twitter import views
 
 router = routers.DefaultRouter()
-router.register(r'dinosaurs', views.DinosaurViewSet)
+router.register(r'tweets', views.TweetsViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
