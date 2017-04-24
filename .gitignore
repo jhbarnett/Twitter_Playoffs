@@ -8,3 +8,9 @@ node_modules
 *.map
 *.js
 .idea/*
+.Python
+.python-version
+pip-selfcheck.json
+bin/*
+include/*
+lib/*
