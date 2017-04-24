@@ -5,7 +5,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class DinosaurService {
-  private apiURL = 'http://localhost:8000/dinosaurs';
+  private apiURL = 'http://localhost:8000/dinosaurs/';
 
   constructor(private http: Http) { }
 
