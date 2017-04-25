@@ -3,7 +3,7 @@ import { TweetService } from '../../services/tweetService'
 
 @Component({
   selector: 'tweets',
-  template: `<ul><li *ngFor="let tweet of tweets">{{tweet.species}}</li></ul>`
+  template: `<ul><li *ngFor="let tweet of tweets">{{tweet}}</li></ul>`
 })
 export class TweetsComponent implements OnInit {
   tweets: any[];
