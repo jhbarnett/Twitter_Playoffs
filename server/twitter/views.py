@@ -1,20 +1,18 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
-
-from .models import Tweets
 from .serializers import TweetsSerializer
-from .api import send_request
+from .api import fetch_tweets
 
-class TweetsViewSet(viewsets.ModelViewSet):
+
+class TweetsViewSet(viewsets.ViewSet):
     """
     API endpoint that allows tweets to be viewed.
     """
-    serializer_class = TweetsSerializer
-    def list(self, request, *args, **kwargs):
+    def list(self, request):
         if request.method == 'GET':
-            r = send_request()
-            tweets = r['statuses']
-            data = list(map(lambda x: x['text'], tweets))
-            return Response(data)
+            data = fetch_tweets("#NBAPlayoffs2017 OR #NBAPlayoffs")
+            serializer = TweetsSerializer(data, many=True)
+
+            return Response(serializer.data)
         else:
             print("no GET")
