@@ -12,6 +12,8 @@ def fetch_tweets(query):
         params={
             "q": query,
             "result_type": "mixed",
+            "count": 100,
+            "include_entities": False
         }
         twitter = OAuth1Session('wLZpuBiSJOwefMtj5JQNQYF55', 'WGPayLiNNl7u9atZMmKWdyFJWd9ucU1Mr0BeviiZaWS3rFTAFl',
                       '2744454516-jCPIngVTt8z7QVyfjYtv0LStygdKWPos2gYwQ6F', 'Y5H617Jay8mRz0AH9IYOpaXz3k35XUZ8uUyAhKgqAx5V4')

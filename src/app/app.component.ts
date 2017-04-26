@@ -4,18 +4,21 @@ import { TweetService } from './services/tweetService'
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}<span *ngIf="itIsJuly">, DjangoCon</span>!</h1>
-              <tweets></tweets>`,
+  template: `<nav>
+                <h1>{{name}}!</h1>
+            </nav>
+            <tweets></tweets>`,
+  styles: [
+      'nav {width: 100%; height:15vh; position: fixed; top: 0vh; background-color: #336699; display: inline-flex; z-index: 10;}',
+      'h1 {color: white; font-size: 250%; align-self: flex-end; margin: 15px;}',
+      'tweets { position: relative; top: 15vh; }'
+  ],
   directives: [TweetsComponent],
   providers: [TweetService]
 })
 
 export class AppComponent {
-  name:string = 'World'
-  itIsJuly:boolean
+  name:string = 'Twitter Playoffs';
 
-  constructor() {
-      var date = new Date()
-      this.itIsJuly = (date.getMonth() == 6 && date.getFullYear() == 2016)
-  }
+  constructor() {}
 }
